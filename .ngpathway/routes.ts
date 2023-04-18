@@ -4,6 +4,6 @@ import { Route } from '@angular/router';
 export const routes: Route[] = __ROUTES__.map(({ path, module }) => {
   return {
     path,
-    loadChildren: () => import(`./router/${module}`).then((mod) => mod.ROUTES)
+    loadChildren: () => import(`./router/${module}`).then((mod) => mod.ROUTES),
   };
 });
