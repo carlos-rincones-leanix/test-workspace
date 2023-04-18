@@ -3,6 +3,7 @@ import { Route } from '@angular/router';
 import { TeamsCatalogPageComponent } from 'src/pages/Teams/teams-catalog-page.component';
 import { TeamDetailsLayoutComponent } from 'src/pages/Teams/[id]/(team-details)/team-details-layout.component';
 import { TeamOverviewPageComponent } from 'src/pages/Teams/[id]/team-overview-page.component';
+import { TeamCustomPageComponent } from 'src/pages/Teams/[id]/[...custom]/team-custom-page.component';
 
 export const ROUTES: Route[] = [
     {
@@ -16,6 +17,10 @@ export const ROUTES: Route[] = [
             {
                 path: '',
                 component: TeamOverviewPageComponent
+            },
+            {
+                path: '**',
+                component: TeamCustomPageComponent
             },
         ]
     },
